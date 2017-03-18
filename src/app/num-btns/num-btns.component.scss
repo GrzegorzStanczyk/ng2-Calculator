@@ -1,0 +1,15 @@
+:host{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-content: space-around;
+    height: 250px;
+}
+
+.btn{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
