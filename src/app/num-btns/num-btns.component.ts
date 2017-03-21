@@ -1,27 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-const BUTTONS: Array<any> = [
-    {key: 'CE'},
-    {key: 'C'},
-    {key: '<'},
-    {key: '/'},
-    {key: '7'},
-    {key: '8'},
-    {key: '9'},
-    {key: '*'},
-    {key: '4'},
-    {key: '5'},
-    {key: '6'},
-    {key: '-'},
-    {key: '1'},
-    {key: '2'},
-    {key: '3'},
-    {key: '+'},
-    {key: 'null'},
-    {key: '0'},
-    {key: ','},
-    {key: '='}
-  ]; 
+export class BTN {
+  key: string;
+  val: any;
+}
+
+// const BUTTONS: BTN[] = [
+//     {key: 'CE', val: clearClick},
+//     {key: 'C', val: clearClick},
+//     {key: '<', val: actionClick},
+//     {key: '/', val: actionClick},
+//     {key: '7', val: numberClick},
+//     {key: '8', val: numberClick},
+//     {key: '9', val: numberClick},
+//     {key: '*', val: actionClick},
+//     {key: '4', val: numberClick},
+//     {key: '5', val: numberClick},
+//     {key: '6', val: numberClick},
+//     {key: '-', val: actionClick},
+//     {key: '1', val: numberClick},
+//     {key: '2', val: numberClick},
+//     {key: '3', val: numberClick},
+//     {key: '+', val: actionClick},
+//     {key: '00', val: numberClick},
+//     {key: '0', val: numberClick},
+//     {key: ',', val: actionClick},
+//     {key: '=', val: actionClick}
+//   ];
+  // function clearClick(){
+  //   console.log(this)
+  // }
+  // function numberClick(){
+  //   console.log(typeof(this.key));
+  //   console.log(parseInt(this.key));
+  //   console.log(typeof(parseInt(this.key)));
+  //   console.log(parseInt(this.key));
+  //   var n = parseInt(this.key);
+  //   return n;
+  // }
+  // function actionClick(){
+  //   console.log(this.key);
+  // }
 
 @Component({
   selector: 'app-num-btns',
@@ -30,35 +49,43 @@ const BUTTONS: Array<any> = [
 })
 
 
-export class NumBtnsComponent implements OnInit {
-  buttons = BUTTONS;
+export class NumBtnsComponent {
+  // buttons = BUTTONS;
+  n: number = 1234;
+  // clearClick = clearClick;
+  // numberClick = numberClick;
+  // actionClick = actionClick;
 
-  // buttons: Array<any> = [
-  //   {key: 'CE', val: this.clearClick()},
-  //   {key: 'C', val: this.clearClick()},
-  //   {key: '&#8678;',val: this.undoLast()},
-  //   {key: '/', val: this.actionClick('/')},
-  //   {key: '7', val: this.numberClick(7)},
-  //   {key: '8', val: this.numberClick(8)},
-  //   {key: '9', val: this.numberClick(9)},
-  //   {key: '*', val: this.actionClick('*')},
-  //   {key: '4', val: this.numberClick(4)},
-  //   {key: '5', val: this.numberClick(5)},
-  //   {key: '6', val: this.numberClick(6)},
-  //   {key: '-', val: this.actionClick('-')},
-  //   {key: '1', val: this.numberClick(1)},
-  //   {key: '2', val: this.numberClick(2)},
-  //   {key: '3', val: this.numberClick(3)},
-  //   {key: '+', val: this.actionClick('+')},
-  //   {key: 'null;',val: this.undoLast()},
-  //   {key: '0', val: this.numberClick(0)},
-  //   {key: ',', val: this.actionClick(',')},
-  //   {key: '=', val: this.actionClick('=')}
-  // ];
-  
-  constructor() { }
+  buttons: BTN[] = [
+    {key: 'CE', val: this.clearClick},
+    { key: 'C', val: this.clearClick },
+    {key: '<', val: this.actionClick},
+    {key: '/', val: this.actionClick},
+    {key: '7', val: this.numberClick},
+    {key: '8', val: this.numberClick},
+    {key: '9', val: this.numberClick},
+    {key: '*', val: this.actionClick},
+    {key: '4', val: this.numberClick},
+    {key: '5', val: this.numberClick},
+    {key: '6', val: this.numberClick},
+    {key: '-', val: this.actionClick},
+    {key: '1', val: this.numberClick},
+    {key: '2', val: this.numberClick},
+    {key: '3', val: this.numberClick},
+    {key: '+', val: this.actionClick},
+    {key: '00', val: this.numberClick},
+    {key: '0', val: this.numberClick},
+    {key: ',', val: this.actionClick},
+    {key: '=', val: this.actionClick}
+  ];
 
-  ngOnInit() {
+  clearClick(){
+    console.log(this)
   }
-
+  numberClick(e){
+    console.log((e.target.innerHTML));
+  }
+  actionClick(){
+    console.log(this);
+  }
 }
