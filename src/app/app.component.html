@@ -4,9 +4,8 @@
       {{title}}
     </h1>
     <div class="cache" id="cache">cache</div>
-    <input type="text"/>
-    <!--<div class="btns">-->
-        <app-num-btns></app-num-btns>
+    <input type="text" [value]="btns.n"/>
+    <app-num-btns #btns></app-num-btns>
         
         <!--<button class="btn" id="CE">CE</button>
         <button class="btn" id="C">C</button>
@@ -28,5 +27,4 @@
         <button class="btn num-btn" id="zero">0</button>
         <button class="btn" id="comma">,</button>
         <button class="btn" id="equal">&#61;</button>        -->
-    <!--</div>-->
 </div>

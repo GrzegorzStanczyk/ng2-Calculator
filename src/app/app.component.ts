@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NumBtnsComponent } from './num-btns/num-btns.component';
 
 @Component({
   selector: 'app-root',
