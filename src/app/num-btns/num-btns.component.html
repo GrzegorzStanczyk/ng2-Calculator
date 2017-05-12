@@ -1,1 +1,22 @@
-<button *ngFor="let button of buttons" [ngClass]="'btn'" (click)="button.val($event)">{{button.key}}</button>
+<!--<button *ngFor="let button of buttons" [ngClass]="'btn'" (click)="button.val($event)">{{button.key}}</button>-->
+<!--<input type="text" [(ngModel)]="value"/>-->
+<button class="btn" id="CE" (click)="clearClick($event)">CE</button>
+<button class="btn" id="C" (click)="clearClick($event)">C</button>
+<button class="btn" id="backspace" (click)="actionClick($event)"><</button>
+<button class="btn" id="division" (click)="actionClick($event)">/</button>
+<button class="btn num-btn" id="seven" (click)="numberClick($event)">7</button>
+<button class="btn num-btn" id="eight" (click)="numberClick($event)">8</button>
+<button class="btn num-btn" id="nine" (click)="numberClick($event)">9</button>
+<button class="btn" id="multiplication" (click)="actionClick($event)">*</button>
+<button class="btn num-btn" id="four" (click)="numberClick($event)">4</button>
+<button class="btn num-btn" id="five" (click)="numberClick($event)">5</button>
+<button class="btn num-btn" id="six" (click)="numberClick($event)">6</button>
+<button class="btn" id="minus" (click)="actionClick($event)">-</button>        
+<button class="btn num-btn" id="one" (click)="numberClick($event)">1</button>
+<button class="btn num-btn" id="two" (click)="numberClick($event)">2</button>
+<button class="btn num-btn" id="three" (click)="numberClick($event)">3</button>
+<button class="btn" id="plus" (click)="actionClick($event)">+</button>
+<button class="btn" id="empty" (click)="numberClick($event)">00</button>
+<button class="btn num-btn" id="zero" (click)="numberClick($event)">0</button>
+<button class="btn" id="comma" (click)="actionClick($event)">,</button>
+<button class="btn" id="equal" (click)="actionClick($event)">=</button>
